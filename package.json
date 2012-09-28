@@ -1,0 +1,24 @@
+{
+  "name": "httpd-mock",
+  "description": "Runs a http static server. Supports easy API mock implementation",
+  "version": "0.2.1",
+  "author": {
+    "name": "José Magalhães",
+    "email": "magalhas@gmail.com"
+  },
+  "dependencies": {
+    "express": "*",
+    "commander": "*",
+    "nconf": "*"
+  },
+  "keywords": [
+    "express",
+    "mock",
+    "testing",
+    "api"
+  ],
+  "main": "index",
+  "engines": {
+    "node": "*"
+  }
+}
