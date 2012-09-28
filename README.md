@@ -50,8 +50,8 @@ Registers the web services received as argument, fallbacks to config.
 Path to the config file
 
 #### httpdMock.setServerRootPath(path)
-Sets the root path of the server. Remember the server is static, so only static
-files (.html, .js, .css, etc). Any server side language won't be supported.
+Sets the root path of the server. Remember the server is static.
+Any server side language won't be supported.
 
 #### httpdMock.start(port)
 Start the http server on the port received as argument, fallbacks to config.
