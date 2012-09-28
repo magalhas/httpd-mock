@@ -6,9 +6,6 @@ the application.
 
 It also acts as a module that can run inside other applications.
 
-## External dependencies
-phantomjs v1.6.0
-
 ## Configuration file
 A JSON file containing the following structure:
 ```js
@@ -30,7 +27,7 @@ A JSON file containing the following structure:
 ```
 
 ## Running as a process
-node index [-c <path-to-configuration-file>]
+node index [-c path-to-configuration-file]
 
 ## Running as a 
 ```js
