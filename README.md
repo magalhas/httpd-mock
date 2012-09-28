@@ -58,5 +58,5 @@ Start the http server on the port received as argument, fallbacks to config.
 
 ## TODO
 \- Support different mock JSON files being returned when web service contains
-variables in the path for bigger testing scope
+variables in the path for bigger testing scope<br />
 \- Implement other HTTP methods
