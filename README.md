@@ -25,6 +25,8 @@ A JSON file containing the following structure:
 	}
 }
 ```
+The web service URI can contain variables, for instance, "client/:id" would be
+caught in a request to "client/123".
 
 ## Running as a process
 node index [-c path-to-configuration-file]
@@ -53,3 +55,8 @@ files (.html, .js, .css, etc). Any server side language won't be supported.
 
 #### httpdMock.start(port)
 Start the http server on the port received as argument, fallbacks to config.
+
+## TODO
+\- Support different mock JSON files being returned when web service contains
+variables in the path for bigger testing scope
+\- Implement other HTTP methods
