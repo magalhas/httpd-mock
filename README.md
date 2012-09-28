@@ -1,4 +1,4 @@
-# httpd-mock for NodeJS
+# httpd-mock for Node.js
 
 This application creates a mock http server on localhost that supports static
 files and webservices implementation providing a simple configuration file to
