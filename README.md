@@ -50,7 +50,7 @@ httpdMock
 When used as a module an instance of the module will create a object with the
 interface documented below.
 
-#### new HtppdMock(options)
+#### new HttpdMock(options)
 Creates the object. Set options. Object structure is the same as the config.
 
 #### createWebServices(webServices)
