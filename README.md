@@ -7,7 +7,10 @@ the application.
 It also acts as a module that can run inside other applications.
 
 ## Usage
-httpd-mock [-c, --config \<path\>] [-O, --output] [-p \<port\>] [-r \<rootpath\>]
+httpd-mock [-c, --config \<path\>] [-O, --output] [-p \<port\>] [-r \<rootpath\>]<br />
+<br />
+If you provide a configuration file and command line arguments that conflicts,
+those arguments will override.
 
 ### Configuration file
 A JSON file containing the following structure:
