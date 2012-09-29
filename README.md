@@ -14,7 +14,7 @@ A JSON file containing the following structure:
 ```js
 {
     "serverRootPath": ".", // default value
-    "servicesPrefix": '/webservice/', // default value
+    "servicesPrefix": '/api/', // default value
     "jsonMocksPath": "./mocks/", // default value
     "webServices": {
         "get": {
