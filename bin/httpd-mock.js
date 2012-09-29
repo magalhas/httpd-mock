@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-var pkg = require('../package.json'),
+var pkg = require("../package.json"),
     commander = require("commander"),
     HttpdMock = require("../lib/httpd-mock");
 
