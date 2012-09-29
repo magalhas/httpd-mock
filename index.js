@@ -20,7 +20,7 @@ if (!module.parent) {
         nconf.overrides({"serverRootPath": commander.rootpath});
     }
     if (commander.output) {
-        nconf.overrides({"output": commander.output);
+        nconf.overrides({"output": commander.output});
     }
 
     new HttpdMock()
