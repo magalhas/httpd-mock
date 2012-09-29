@@ -7,7 +7,7 @@ the application.
 It also acts as a module that can run inside other applications.
 
 ## Usage
-node index [-c, --config \<path\>] [-O, --output] [-p \<port\>] [-r \<rootpath\>]
+httpd-mock [-c, --config \<path\>] [-O, --output] [-p \<port\>] [-r \<rootpath\>]
 
 ### Configuration file
 A JSON file containing the following structure:
@@ -79,4 +79,5 @@ null fallbacks to random.
 ## TODO
 \- Support different mock JSON files being returned when web service contains
 variables in the path for bigger testing scope<br />
-\- Implement other HTTP methods
+\- Implement other HTTP methods<br />
+\- Shell command line to edit web services on the fly

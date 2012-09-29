@@ -1,6 +1,6 @@
 {
   "name": "httpd-mock",
-  "description": "Runs a http static server. Supports easy API mock implementation",
+  "description": "Runs a http static server with easy API mock implementation.",
   "version": "0.2.4",
   "author": {
     "name": "José Magalhães",
@@ -23,6 +23,7 @@
     "api"
   ],
   "main": "index",
+  "bin": "./bin/httpd-mock.js",
   "engines": {
     "node": ">=0.6"
   }
