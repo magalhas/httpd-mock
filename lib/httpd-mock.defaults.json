@@ -1,0 +1,10 @@
+{
+    "serverRootPath": "./public",
+    "servicesPrefix": "/api/",
+    "jsonMocksPath": "./mocks",
+    "output": "false",
+    "webServices": {
+        "get": {},
+        "post": {}
+    }
+}

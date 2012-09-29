@@ -1,33 +1,26 @@
 #!/usr/bin/env node
-var commander = require("commander"),
-    nconf = require("nconf"),
+var jspackage = require('./package.json'),
+    commander = require("commander"),
     HttpdMock = require("./lib/httpd-mock");
+
+exports = module.exports = HttpdMock;
 
 if (!module.parent) {
     commander
-        .version("0.2.3")
-        .option("-c, --config [path]", "Path to the configuration file")
-        .option("-p, --port [port]", "Port that the http mock server will use")
-        .option("-r, --rootpath [path]", "http mock server root path for static files")
+        .version(jspackage.version)
+        .option("-c, --config <path>", "Path to the configuration file")
         // @todo Control other output modes besides console
-        .option("-o, --output", "flag to enable output, useful if you don't specify a port")
+        .option("-O, --show-output", "flag to enable output, useful if you don't specify a port")
+        .option("-p, --port <port>", "Port that the http mock server will use [random]")
+        .option("-r, --rootpath <path>", "http mock server root path for static files [./public]")
         .parse(process.argv);
 
-    if (commander.port) {
-        nconf.overrides({"serverPort": commander.port});
-    }
-    if (commander.rootpath) {
-        nconf.overrides({"serverRootPath": commander.rootpath});
-    }
-    if (commander.output) {
-        nconf.overrides({"output": commander.output});
-    }
+    var options = {};
+    commander.port && (options.serverPort = commander.port);
+    commander.rootpath && (options.serverRootPath = commander.rootpath);
+    commander.showOutput && (options.output = commander.showOutput);
 
-    new HttpdMock()
+    new HttpdMock(options)
         .setConfigFile(commander.config)
-        .setServerRootPath()
-        .createWebServices()
         .start();
-} else {
-    exports = module.exports = HttpdMock;
 }
