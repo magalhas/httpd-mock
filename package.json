@@ -1,7 +1,7 @@
 {
   "name": "httpd-mock",
   "description": "Runs a http static server with easy API mock implementation.",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "author": {
     "name": "José Magalhães",
     "email": "magalhas@gmail.com"
