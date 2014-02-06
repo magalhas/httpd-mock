@@ -113,7 +113,5 @@ Start the http server on the port received as argument, fallbacks to config, if
 null fallbacks to random.
 
 ## TODO
-\- Support different mock JSON files being returned when web service contains
-variables in the path for bigger testing scope<br />
-\- Implement other HTTP methods<br />
-\- Shell command line to edit web services on the fly
+\- Implement DELETE HTTP method
+\- Structure the code, it's messy
