@@ -1,6 +1,6 @@
 {
   "serverRootPath": "./public",
   "servicesPrefix": "/api",
-  "output": "false",
+  "output": false,
   "entities": {}
 }

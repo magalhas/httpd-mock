@@ -18,7 +18,7 @@ A JSON file containing the following structure:
 {
     "serverRootPath": "./public", // default value
     "servicesPrefix": "/api", // default value
-    "output": "false", // default value
+    "output": false, // default value
     "serverPort": "8080", // default value is random, set output has true to see the generated port
     "entities": { // It'll create REST services (GET, POST, PUT, DELETE) per each entity
         "myEntitiy": {
