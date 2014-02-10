@@ -14,7 +14,7 @@ those arguments will override.
 
 ### Configuration file
 A JSON file containing the following structure:
-```json
+```js
 {
     "serverRootPath": "./public", // default value
     "servicesPrefix": '/api', // default value
