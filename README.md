@@ -14,61 +14,20 @@ those arguments will override.
 
 ### Configuration file
 A JSON file containing the following structure:
-```js
+```json
 {
     "serverRootPath": "./public", // default value
-    "servicesPrefix": '/api/', // default value
-    "jsonMocksPath": "./mocks/", // default value
+    "servicesPrefix": '/api', // default value
     "output": "false", // default value
     "serverPort": "8080", // default value is random, set output has true to see the generated port
-    "webServices": {
-        "get": {
-            "YOUR_WEBSERVICE_URI": "WEBSERVICE_JSON_RESULT_FILE.json",
-            "YOUR_WEBSERVICE_URI": "YOUR_ENTITY_NAME"
-        },
-        "post": {
-        	"YOUR_WEBSERVICE_URI": "WEBSERVICE_JSON_RESULT_FILE.json",
-            "YOUR_WEBSERVICE_URI": "YOUR_ENTITY_NAME"
-		}
-	},
-    "defaults": {
-        "YOUR_ENTITY_NAME": "YOUR_PATH_TO_JSON_FILE_CONTAINING_ARRAY.json",
-        "YOUR_OTHER_ENTITY_NAME": [{
-            "YOUR_DATA": "IS_YOURS"
-        }]
-    }
-}
-```
-The web service URI can contain variables, for instance, "client/:id" would be
-caught in a request to "client/123".
-
-When setting the default mock data, each resource may have a special property _id to identify the item. If you don't set it will get randomly generated. You can use this id to query for the resource (or update it) by using :id on your URI. Example:
-
-```js
-{
-    "webServices": {
-        "get": {
-            "myResource": "myResource",
-            "myResource/:id": "myResource"
-        },
-        "post": {
-            "myResource": "myResource",
-            "myResource/:id": "myResource"
+    "entities": { // It'll create REST services (GET, POST, PUT) per each entity
+        "myEntitiy": {
+            "defaults": "pathToMyData.json", // the JSON file should contain an array with all the default entries of the entity
+            "idAttribute": "_id" // default value
         }
-    },
-    "defaults": {
-        "myResource": [{
-            "_id": "0",
-            "data": "something"
-        }, {
-            "_id": "1",
-            "data": "else"
-        }]
     }
 }
 ```
-
-Only get and post methods are supported for the time being.
 
 ### Module usage example
 ```js
@@ -111,7 +70,3 @@ Any server side language won't be supported.
 #### start(port || defaults to config || defaults to random)
 Start the http server on the port received as argument, fallbacks to config, if
 null fallbacks to random.
-
-## TODO
-\- Implement DELETE HTTP method
-\- Structure the code, it's messy

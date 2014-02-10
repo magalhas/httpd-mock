@@ -1,11 +1,6 @@
 {
   "serverRootPath": "./public",
-  "servicesPrefix": "/api/",
-  "jsonMocksPath": "./mocks",
+  "servicesPrefix": "/api",
   "output": "false",
-  "webServices": {
-    "get": {},
-    "post": {}
-  },
-  "defaults": {}
+  "entities": {}
 }
