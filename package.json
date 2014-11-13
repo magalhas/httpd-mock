@@ -11,7 +11,7 @@
     "url": "https://github.com/magalhas/httpd-mock.git"
   },
   "dependencies": {
-    "express": "*",
+    "express": "^3.0.0",
     "body-parser": "*",
     "commander": "*",
     "underscore": "*"
